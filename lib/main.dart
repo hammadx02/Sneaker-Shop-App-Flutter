@@ -15,14 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context) => Cart(),
-      builder: (context, child) => MaterialApp(
+      builder: (context, child) => const MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Sneaker Shop',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: const IntroScreen(),
+        home: IntroScreen(),
       ),
     );
   }
